@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  rust_api:
+    container_name: rust_api
+    image: eveeifyeve/teaclientAPI
+    build: .
+    ports:
+      - 8080:8080
+    environment:
+      - DATABASE_URL=Input your url here
+    depends_on:
